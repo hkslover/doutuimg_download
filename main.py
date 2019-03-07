@@ -16,7 +16,7 @@ def download_file(file_url):
         code.write(f.content)
 def make_data(url):
     html1 = requests.get(url,headers = headers)
-    result1 = re.findall('data-original="(.*?)!dta',html1.text,re.S)
+    result1 = re.findall('data-original="(.*?)" alt',html1.text,re.S)
     return result1
     
 def main():
